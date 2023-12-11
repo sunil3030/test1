@@ -1,0 +1,760 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+
+}
+/* contactbox */
+
+.contactbox {
+     background-color: rgba(0, 0, 0, 0.904);
+     color: white;
+     font-size: 20px;
+     padding: 15px 150px;
+     display: flex;
+     justify-content:space-between;
+     flex-wrap: wrap;
+}
+.contactbox span{
+    padding-left: 50px;
+}
+.contactbox i{
+    padding-right: 30px;
+}
+@media screen and (max-width:1350px) {
+    .contactbox{
+        flex-direction: column;
+        gap: 50px;
+        align-items: start;
+    }
+}
+@media screen and (max-width:770px) {
+    .contactbox .contacts,.contactbox .content{
+        display: none;
+    }
+}
+    
+
+
+/* nav */
+
+nav{
+    padding: 30px ;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 1px 1px 5px 1px grey;
+    background-color:bisque;
+    width: 100%;
+}
+
+.fontsize{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav .btns .btn{
+        border: none;
+        font-size: 20px;
+        border-right: 4px solid palevioletred;
+        background-color: unset;
+        padding: 5px 20px;
+        font-weight: bold;
+
+        
+}
+nav .btns .btn:hover{
+    cursor: pointer;
+    
+    color: blue;
+    transform: scale(1.1,1.1);
+    
+    
+}
+nav .btns .unset{
+       border: unset;
+}
+
+nav .btns .search{
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 200px;
+
+}
+nav input::placeholder{
+    color: grey;
+}
+.login{
+   font-size: 30px;
+   margin: 0 20px;
+}
+.login i{
+    color: blueviolet;
+}
+
+nav input:checked~.btns{
+    /* left: 0; */
+}
+nav a{
+    text-decoration: none;
+}
+nav .fa-bars{
+    font-size: 25px;
+}
+nav #box,nav .fa-bars{
+    display: none;
+}
+
+ /* responsive nav  */
+
+@media screen and (max-width:1350px) {
+ 
+    nav .btns .btn{
+        display: block;
+        border: none;
+        padding: 20px;
+
+    }
+    nav .fa-bars{
+        display: inline;
+    }
+   
+    
+    
+   
+    nav .btns{
+        flex-direction: column;
+        position: fixed;
+        top:119px;
+        background-color:darkkhaki;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 50px;
+    }
+    nav .fontsize{
+        /* background-color: red; */
+        color: blue;
+        font-size: 50px;
+        
+    }
+    nav .btns input{
+        margin-bottom: 30px;
+    }
+    nav .login{
+        display: flex;
+        justify-content: start;
+    }
+}
+
+@media screen and (max-width:534px){
+    nav .btns{
+        top:92px
+    }
+    nav .fontsize{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:356px) {
+    nav .btns{
+        top:125px
+    }
+    
+}
+   
+/* mainpage */
+
+.mainpage{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 0;
+    /* background-color: aqu; */
+    
+}
+
+.imgcard{
+    padding: 50px;
+    /* width: 70%; */
+    background-color: aqu;
+    
+}
+.imgcard img{
+     height: 500px;
+     width: 600px;
+}
+.right h1{
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    color:red;
+    
+}
+.right li{
+    font-size: 25px;
+    line-height: 35px;
+    font-weight: bold;
+}
+.imgbox{
+    position: relative;
+}
+.violetbox{
+    background-color: blueviolet;
+    min-height: 800px;
+    width: 420px;
+    justify-content: end;
+    
+   
+}
+.coolpic{
+  position:absolute;
+  top:100px ;
+  left: -150px;
+  animation-name:coolpic ;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.coolpic img{
+    width: 500px;
+    height: 600px;
+}
+@media screen and (max-width:1350px) {
+    .mainpage{
+        flex-direction: column;
+    }
+    .mainpage .imgcard{
+        padding: 50px 10px;
+    }
+    .mainpage .right{
+        padding: 20px;
+        width: 100%;
+        /* background-color: aqua; */
+    }
+    .mainpage .imgcard{
+        width: 100%;
+    }
+    .mainpage .imgcard img{
+        width: 100%;
+
+    }
+    .mainpage .coolpic img{
+        height: 500px;
+        width: 100%;
+    
+    }
+    .mainpage .coolpic{
+        padding: 20px;
+        left: 0;
+    }
+    .mainpage .violetbox{
+        width: 100%;
+        min-height: 750px;
+    }
+
+    @keyframes coolpic {
+        0%{
+            left:900px
+        }
+        /* 25%{
+            left:600px
+        }
+        50%{
+            left:400px
+        }
+        75%{
+            left:200px
+        } */
+        100%{
+            left:0
+        }
+        
+    }
+}
+
+/* About Us */
+
+.about{
+    background-color: rgb(224, 220, 220);
+    background-image: url(./about-bg.png);
+    background-size: cover;
+    width: 100%;
+    min-height: 900px;
+    padding: 100px ;
+}
+.about img{
+   min- height: 950px;
+    width: 100%;
+}
+.about b{
+    font-size: 50px;
+    
+    border-bottom: 10px solid darkorchid;
+}
+.about p{
+    padding-top: 600px;
+    font-size: 20px;
+    line-height: 40px;
+}
+.about .readbtn,.leftbox button{
+    background-color: darkviolet;
+    color: white;
+    font-size: 20px;
+    padding: 20px 50px;
+    border-radius: 5px;
+    border:none;
+    margin: 30px 0;
+}
+.about .readbtn:hover,.leftbox button:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.808);
+}
+
+@media screen and (max-width:1350px) {
+    .about p{
+        padding-top: 100px;
+        line-height: 45px;
+    }
+    .about b{
+        width: 100%;
+    }
+    .about {
+        padding: 30px;
+        min-height: 800px;
+    }
+}
+
+/* Cameras */
+
+.cameras{
+    padding:30px 100px 0;
+    display: flex;
+    background-color: rgb(224, 220, 220);
+    animation-name:cameras;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+.cameras b{
+    font-size: 50px;
+    border-bottom: 10px solid darkviolet;
+    font-weight: bold;
+    
+
+}
+
+.camimg1{
+    background-image: url(./img-2.png);
+    width:580px;
+    min-height: 600px;
+    margin:50px 10px 0;
+    text-align: center;
+    
+    
+}
+.camimg1 img{
+    background-size: cover;
+
+}
+.camimg1 p{
+    padding-top: 460px;
+    padding-bottom: 5px;
+    font-size: 40px;
+}
+.camimg1 b{
+    border: none;
+}
+.violet{
+    color: darkviolet;
+}
+.cameras .leftbox{
+    width: 50%;
+    padding: 10px;
+}
+.cameras  p{
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.cameras .rightbox{
+    padding: 200px 0px;
+    padding-left: 100px;
+    background-color: re;
+    position: relative;
+   
+}
+.cameras .rightbox .camimg2{
+    padding: 30px;
+    position: relative;
+    animation-name: camimg2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
+}
+.camimg2 img{
+     height: 450px;
+    width: 450px;
+   
+}
+.cameras .rightbox .content{
+    font-size: 50px;
+    
+    color:white;
+    position: absolute;
+    top: 720px;
+    left: 370px;
+    
+}
+.cameras .rightbox .content b{
+    border: none;
+}
+@keyframes cameras{
+    from{
+        left:800px;
+    }
+    to{
+        left: 0;
+    }
+}
+
+@media screen and (max-width:1350px) {
+    .cameras{
+        flex-direction: column;
+        padding: 30px;
+    }
+    .cameras .camimg1{
+       display: none;
+    }
+    .cameras .leftbox{
+        width: 100%;
+        
+    }
+    .cameras .leftbox p{
+        padding-top: 50px;
+    }
+    .cameras .rightbox{
+        width: 100%;
+        padding: 20px;
+    }
+    .cameras .rightbox .camimg2 img{
+        width:400px;
+        height:400px
+    }
+@keyframes camimg2{
+    from{
+        left:0
+    }
+    to{
+        left:800px
+    }
+}
+
+@media screen and (max-width:450px) {
+    .cameras .rightbox .camimg2 img{
+        width: 100%;
+        height: 300px;
+    }
+        
+    }
+    
+    .cameras .rightbox .camimg2{
+        padding: 0;
+        animation-duration: 5s;
+    }
+    .cameras .rightbox .content{
+        display: none;
+    }
+    .cameras p{
+        line-height: 45px;
+    }
+    /* @keyframes camimg2{
+         from{
+            left:0
+        }
+        to{
+            left:00px
+        } 
+    } */
+}
+
+/* contact */
+
+.contact{
+    padding: 100px 50px;
+}
+.contact h1{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.contact .bluebox{
+    background-color: blue;
+    padding:50px;
+    border-radius: 5px;
+
+}
+.contact .bluebox input{
+    padding: 15px;
+    width: 100%;
+    margin:20px 0;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+@media screen and (min-width:1300px) {
+    .contact .bluebox input{
+        width: 48%;
+        
+    }
+    .contact .bluebox input:first-child{
+        margin-right: 40px;
+    }
+    .contact .bluebox input:nth-child(3){
+        margin-right: 40px;
+    }
+}
+
+@media screen and (min-width:800px) and (max-width:1299px) {
+    .contact .bluebox input{
+        width: 47%;
+        
+    }
+    .contact .bluebox input:first-child{
+        margin-right: 40px;
+    }
+    .contact .bluebox input:nth-child(3){
+        margin-right: 40px;
+    }
+}
+@media screen and (min-width:800px) and (max-width:950px) {
+    .contact .bluebox input{
+        width: 46%;
+        
+    }
+    .contact .bluebox input:first-child{
+        margin-right: 40px;
+    }
+    .contact .bluebox input:nth-child(3){
+        margin-right: 40px;
+    }
+}
+@media screen and (min-width:1520px)  {
+    .contact .bluebox input{
+        width: 48%;
+        
+    }
+    .contact .bluebox input:first-child{
+        margin-right: 40px;
+    }
+    .contact .bluebox input:nth-child(3){
+        margin-right: 40px;
+    }
+}
+/* @media screen and (min-width:1800) {
+    .contact .bluebox input{
+        width: 100%;
+        
+    }
+     .contact .bluebox input:first-child{
+        margin-right: 40px;
+    }
+    .contact .bluebox input:nth-child(3){
+        margin-right: 40px;
+    } 
+} */
+
+.contact .bluebox textarea{
+    padding: 15px;
+    width: 100%;
+    margin:20px 0;
+    font-size: 25px;
+    border-radius: 5px;
+    border: none;
+    min-height: 150px;   
+    color: gray;
+}
+.contact button{
+    padding: 20px 50px;
+    background-color:limegreen;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    
+
+}
+.contact button:hover{
+    background-color: white;
+    color:limegreen;
+    cursor: pointer;
+}
+.contact .btnbox{
+    display: flex;
+    justify-content: center;
+}
+
+/* details */
+
+.details{
+    background-color: black;
+    color:white;
+    padding: 50px;
+    text-align: center; 
+
+}
+.details .detailsbox {
+    font-size: 30px;
+    padding: 30px;
+    display: flex;
+    color: darkviolet;
+    justify-content: center;
+    gap: 50px;
+}
+.details .detailsbox input{
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    
+
+}
+.details .icons{
+    display: flex;
+    gap: 20px;
+}
+.details .icons i{
+   height: 60px;
+   width: 60px;
+   border: 2px solid darkviolet;
+   border-radius: 50%;
+   padding: 12px;
+}
+.details h2{
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+.details .regbox{
+    display: flex;
+}
+.details .regbox button{
+    background-color: darkviolet;
+    color: white;
+    font-size: 20px;
+    padding: 10px 30px;
+    border: none;
+}
+.details .regbox button:hover{
+    background-color: lime;
+    cursor: pointer;
+}
+.details .rowicons i{
+    padding: 20px;
+}
+/* .details .icons .fa-facebook{
+    color:blue
+}
+.details .icons .fa-instagram{
+    color:orangered
+}
+.details .icons .fa-linkedin{
+    color:blue
+}
+.details .icons .fa-youtube{
+    color:red
+} */
+
+@media screen and (max-width:1350px) {
+    .details .detailsbox{
+        flex-direction: column;
+    }
+    .details .regbox input,.details .regbox button{
+        width: 50%;
+        padding: 10px;
+    }
+    .details .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+@media screen and (max-width:450px) {
+    .details  .icons{
+        flex-direction: column;
+    }
+    .details .regbox input,.details .regbox button{
+        width: 100%;
+        padding: 10px;
+    }
+    .details .regbox{
+        flex-direction: column;
+    }
+    .details .rowicons i{
+        padding: 10px;
+    }
+}
+
+/* Readcontent */
+
+.readcontent{
+    padding: 50px 100px;
+    background-image: url("./about-bg.png");
+    min-height: 700px;
+    width: 100%;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.readcontent b{
+    font-size: 50px;
+    padding-bottom: 10px;
+    color: blue;
+    border-bottom: 10px solid darkviolet;
+}
+.readcontent .pbox{
+    padding: 50px;
+    /* background-color: aqua; */
+}
+.readcontent p{
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color:goldenrod;
+    
+}
+.readcontent .backbtn{
+    background-color: red;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    float: right;
+}
+.readcontent .backbtn:hover{
+    cursor: pointer;
+    background-color:crimson;
+}
+
+@media screen and (max-width:900px) {
+    .bgreadimg .readcontent{
+        padding: 50px;
+        overflow-y: hidden;
+    }
+    .bgreadimg .pbox{
+        padding: 50px 10px;
+    }
+}
+@media screen and (max-width:605px) {
+    .readcontent b{
+        border:none ;
+    }
+}
